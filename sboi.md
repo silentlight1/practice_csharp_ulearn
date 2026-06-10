@@ -12,7 +12,7 @@ classDiagram
     direction TB
     
     class ReportMaker {
-        +List~string~ FindDevicesFailedBeforeDateObsolete(int day, int month, int year, int[] failureTypes, int[] deviceId, object[][] times, List~Dictionary~ devices)
+        +List~string~ FindDevicesFailedBeforeDateObsolete(int day, int month, int year, int[] failureTypes, int[] deviceId, object[][] times, List~Dictionary~string, object~~ devices)
 
         +List~string~ FindDevicesFailedBeforeDate(DateTime betterDate, Failure[] failures, Device[] devices)
     }
