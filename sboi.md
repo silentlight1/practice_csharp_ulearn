@@ -5,9 +5,7 @@
 2. Device - это устройство (Id, Name)
 3. Failure - это сбои (DeviceId, Date, Type)
 4. FailureType - перечисленные типы сбоя (UnexpectedShutdown, ShortNonResponding, HardwareFailures, ConnectionProblems)
-5. Common - старый класс, который не используется в коде, но он хранит в себе логику для преобразований, поэтому было решено его оставить.
 ## 2. Диаграмма классов (Mermaid)
-
 
 ```mermaid
 classDiagram
