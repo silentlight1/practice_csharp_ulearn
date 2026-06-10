@@ -8,17 +8,14 @@
 5. Common - старый класс, который не используется в коде, но он хранит в себе логику для преобразований, поэтому было решено его оставить.
 ## 2. Диаграмма классов (Mermaid)
 
+
 ```mermaid
 classDiagram
     direction TB
-
-    class Common {
-        +int IsFailureSerious(int failureType)
-        +int Earlier(object[] v, int day, int month, int year)
-    }
-
+    
     class ReportMaker {
         +List~string~ FindDevicesFailedBeforeDateObsolete(int day, int month, int year, int[] failureTypes, int[] deviceId, object[][] times, List~Dictionary~ devices)
+
         +List~string~ FindDevicesFailedBeforeDate(DateTime betterDate, Failure[] failures, Device[] devices)
     }
 
@@ -39,8 +36,8 @@ classDiagram
     class Failure {
         +int DeviceId
         +DateTime Date
-        +FailureType Type
-        +Failure(int deviceid, DateTime date, FailureType type)
+        +FailureType TypeFal
+        +Failure(int deviceid, DateTime date, FailureType typefal)
         +bool IsSerious()
         +bool IsHappenEarlier(DateTime date)
     }  
