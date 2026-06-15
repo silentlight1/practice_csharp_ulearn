@@ -110,12 +110,12 @@ classDiagram
     Creeps --> Treasure : ассоциация
     Wolves --> Army : ассоциация
     ResourcePile --> Treasure : ассоциация
-    Player --> Army : параметр метода CanBeat
-    Player --> Treasure : параметр метода Consume
 
     %% Зависимости - КлассА ..> КлассБ
     Interaction ..> Player : параметр метода
     Interaction ..> IOwner : приведение типа
     Interaction ..> IHaveArmy : приведение типа
     Interaction ..> IHaveTreasure : приведение типа
+    Player ..> Army : параметр метода CanBeat
+    Player ..> Treasure : параметр метода Consume
 ```
