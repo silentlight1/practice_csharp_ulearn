@@ -94,32 +94,27 @@ classDiagram
     }
 
     %% Реализации интерфейсов - Интерфейс <|.. Класс
-    IOwner <|.. Dwelling
-    IOwner <|.. Mine
-    IHaveArmy <|.. Mine
-    IHaveTreasure <|.. Mine
-    IHaveArmy <|.. Creeps
-    IHaveTreasure <|.. Creeps
-    IHaveArmy <|.. Wolves
-    IHaveTreasure <|.. ResourcePile
+    IOwner <|.. Dwelling : реализация
+    IOwner <|.. Mine : реализация
+    IHaveArmy <|.. Mine : реализация
+    IHaveTreasure <|.. Mine : реализация
+    IHaveArmy <|.. Creeps : реализация
+    IHaveTreasure <|.. Creeps : реализация
+    IHaveArmy <|.. Wolves : реализация
+    IHaveTreasure <|.. ResourcePile : реализация
 
     %% Ассоциации - КлассА --> КлассБ
-    Mine --> Army
-    Mine --> Treasure
-    Creeps --> Army
-    Creeps --> Treasure
-    Wolves --> Army
-    ResourcePile --> Treasure
-    Player --> Army : используется в CanBeat
-    Player --> Treasure : используется в Consume
+    Mine --> Army : ассоциация
+    Mine --> Treasure : ассоциация
+    Creeps --> Army : ассоциация
+    Creeps --> Treasure : ассоциация
+    Wolves --> Army : ассоциация
+    ResourcePile --> Treasure : ассоциация
+    Player --> Army : параметр метода CanBeat
+    Player --> Treasure : параметр метода Consume
 
     %% Зависимости - КлассА ..> КлассБ
     Interaction ..> Player : параметр метода
-    Interaction ..> Dwelling : проверка
-    Interaction ..> Mine : проверка
-    Interaction ..> Creeps : проверка
-    Interaction ..> Wolves : проверка
-    Interaction ..> ResourcePile : проверка
     Interaction ..> IOwner : приведение типа
     Interaction ..> IHaveArmy : приведение типа
     Interaction ..> IHaveTreasure : приведение типа
